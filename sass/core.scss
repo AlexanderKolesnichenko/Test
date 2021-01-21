@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/**
+ * Основные стили
+ **/
+
+html {
+	font-size: 16px;
+
+
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+nav{
+	height: 0;
+}
+
+p{
+	margin: 0;
+
+}
+
+.container {
+	@include min-max(320px, 100%, 0);
+}
+
+.wrap {
+	@include min-max(320px, 1200px, 15px);
+
+	@media (max-width: 1024px) {
+		@include min-max(320px, 800px, 15px);
+	}
+
+	@media (max-width: 768px) {
+		@include min-max(320px, 748px, 15px);
+	}
+
+	@media (max-width: 320px) {
+		@include min-max(320px, 310px, 15px);
+	}
+}
+
